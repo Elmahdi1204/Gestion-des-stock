@@ -70,8 +70,11 @@ namespace Gestion_des_stock.gestion_achat
                 else
                 {
 
-                    if (int.Parse(bunifuTextBox1.Text) < int.Parse(bunifuTextBox3.Text))
+                    if (int.Parse(bunifuTextBox1.Text) > int.Parse(bunifuTextBox3.Text))
                     {
+                        MessageBox.Show("le prix d'achat est superiere au prix de vent ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    
                         double prixqnt = double.Parse(bunifuTextBox2.Text) * double.Parse(bunifuTextBox1.Text);
                         bunifuDataGridView1.Rows.Add(bunifuTextBox6.Text, bunifuTextBox5.Text, bunifuTextBox1.Text, bunifuTextBox2.Text, prixqnt.ToString(), bunifuTextBox3.Text);
                         label2.Text = totale().ToString() + " DA";
@@ -85,11 +88,7 @@ namespace Gestion_des_stock.gestion_achat
                         bunifuTextBox6.Clear();
 
                         bunifuTextBox6.Focus();
-                    }
-                    else
-                    {
-                        MessageBox.Show("le prix d'achat est superiere au prix de vent ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                  
 
 
                 }
@@ -156,7 +155,7 @@ namespace Gestion_des_stock.gestion_achat
 
         private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
         {
-            Gestion_des_produit.Dataproduit.Afficherlesproduit(bunifuDataGridView2, bunifuTextBox4.Text.Replace("'", "''"));
+          
         }
 
         private void bunifuDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -283,7 +282,7 @@ namespace Gestion_des_stock.gestion_achat
 
                             list.Add(new report
                             {
-                                idproduit = "" + k,
+                                idproduit = "" + row.Cells[0].Value.ToString(),
                                 nomproduit = row.Cells[1].Value.ToString(),
                                 prix = row.Cells[2].Value.ToString(),
                                 qnt = row.Cells[3].Value.ToString(),
@@ -300,7 +299,7 @@ namespace Gestion_des_stock.gestion_achat
                         }
                         if(bunifuCheckBox1.Checked == true)
                         {
-                        facture.Facture imp = new facture.Facture(list, idfacture.ToString(), nomfournissuer, DateTime.Now.ToString("dd/MM/yyyy"), label2.Text, bunifuTextBox8.Text);
+                        facture.Facture imp = new facture.Facture(list, idfacture.ToString(), nomfournissuer, DateTime.Now.ToString("dd/MM/yyyy"), totale().ToString(), bunifuTextBox8.Text);
 
                             imp.ShowDialog();
                         }
@@ -368,6 +367,15 @@ namespace Gestion_des_stock.gestion_achat
             selectionerunfournissuer.ShowDialog();
         }
 
+        private void bunifuTextBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue==13)
+            {
+                Gestion_des_produit.Dataproduit.Afficherlesproduit(bunifuDataGridView2, bunifuTextBox4.Text.Replace("'", "''"));
+            }
+
+        }
+
         private void bunifuTextBox6_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -396,14 +404,22 @@ namespace Gestion_des_stock.gestion_achat
                         {
                             try
                             {
-                                Ajouter_produit.Ajouterproduitfromachat ajouterunproduit = new Ajouter_produit.Ajouterproduitfromachat(long.Parse(bunifuTextBox6.Text));
+                                prixvent = 0; prixachat = 0;
+                                                           qntachte = 0;
+                                                                idproduit = 0;
+                                                  nom = "";
+        Ajouter_produit.Ajouterproduitfromachat ajouterunproduit = new Ajouter_produit.Ajouterproduitfromachat(long.Parse(bunifuTextBox6.Text));
                                 ajouterunproduit.ShowDialog();
                                 bunifuTextBox5.Text = nom;
                                 bunifuTextBox1.Text = prixachat.ToString();
                                 bunifuTextBox3.Text = prixvent.ToString();
                                 bunifuTextBox2.Text = qntachte.ToString();
-                                bunifuButton21.PerformClick();
+                                if (nom !="" || prixvent !=0)
+                                {
+                                    bunifuButton21.PerformClick();
+                                }
 
+                                bunifuTextBox6.Clear();
                                 bunifuTextBox6.Focus();
                             }
                             catch

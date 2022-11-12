@@ -155,23 +155,31 @@
   </data>
   <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKYAAAA4CAYAAAB35INEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADCSURBVHhe7dKhAYAwAMCwXbKX4b+dgR9wAJ6KiKjajnnu
+        iVBORw0KGgoAAAANSUhEUgAAAKYAAAA+CAYAAAChvWBZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVHhe7dKhAYAwAMCwXbKX4b+dgR9wAJ6KiKjajnnu
         Nc/7ho693jG/AvzLmCQZkyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRj
         kmRMkoxJkjFJMiZJxiTJmCQZkyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRjkmRMkoxJkjFJMiZJxiTJmCQZ
-        kyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRjkmRMkoxJ0pjHvr4C/ObY1wPKzgsKof+LdwAAAABJRU5ErkJg
-        gg==
+        kyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRjkmRMkoxJkjFJMiZJxiTJmCQZkyRjkjTmsa+vAL859vUA6l9w
+        0OVngyUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAVQAAAA+CAYAAAB0iuM9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVHhe7dSxCQMxAARB9V/VC5XhMlyAjUCJw/dvOAOX
-        XAE7AAittV7XdX3MzOz+dkNPTsfYBwD/2Q09ORVUgCcEFSAiqAARQQWICCpARFABIoIKEBFUgIigAkQE
-        FSAiqAARQQWICCpARFABIoIKEBFUgIigAkQEFSAiqAARQQWICCpARFABIoIKEBFUgIigAkQEFSAiqAAR
-        QQWICCpARFABIoIKEBFUgIigAkQEFSAiqAARQQWICCpARFABIoIKEBFUgIigAkQEFSAiqAARQQWICCpA
-        RFABIoIKEBFUgIigAkQEFSAiqAARQQWICCpARFABIoIKEBFUgIigAkR+gjrnfO/DzMzubzf05BSA58b4
-        Ah5vbHhHbZvWAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAREAAAA+CAYAAAAMGS/ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVHhe7dSxCQMxAARB9V+VHpXhMlyAjUCJs39vOgOX
+        XAE7ALK11mvO+TEzu7vdjZOQMfYB8MTuxkmIiADPiQiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQ
+        iAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQ
+        iAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQ
+        iAiQiAiQiAiQiAiQiAiQiAiQ/ETkuq73PszM7m534yQE4F9jfAHDuDqUTs/JEwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAAA+CAYAAACbQR1vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVGhD7dAxAcAgAMTAKsFy8YcMdmgFxEEy3PK/5Rnz
+        rDHvdTrrD0CHRwFoNCkAjSYFoNGkADSaFIBGkwLQaFIAGk0KQKNJAWg0KQCNJgWg0aQANJoUgEaTAtBo
+        UgAaTQpAo0kBaDQpAI0mBaDRpAA0mhSARpMC0GhSABpNCkCjSQFoNCkAjSYFoNGkADSaFIBGkwKM92w6
+        FN6zP+kvbALQwrwQAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

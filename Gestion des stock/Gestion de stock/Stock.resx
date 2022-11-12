@@ -222,6 +222,9 @@
   <metadata name="Fournisseur.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="mod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABPYAAAB8CAYAAADq4D70AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -243,6 +246,21 @@
         SNgDAAAAgCBhDwAAAACChD0AAAAACBL2AAAAACBI2AMAAACAIGEPAAAAAIKEPQAAAAAIEvYAAAAAIOjP
         sHd93gAAAAAAK9n3/TYz3nvj5nfs/HPPzMzMzMzMzMzMFtgZ9cb3MhMeAAAAAAAAAAAAAAAAAADwybY9
         AOesh1DsPe5IAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuButton28.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM4AAAAsCAYAAAAtk4dNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAINSURBVHhe7d0hbxRBFMDxlUgkYme3ko+ARCKRlRi+BYIP
+        QJjZC54PQIJrgmqCqjyBJ6mogVxoAylJm3vDm90h0Lu3F3jy7j/JT+3c1tw/Mzei08yN/m2+1yY57gY5
+        6ZIsQ5KvXcoZ2FfTd1yWXZTTEPOzPub7NYd/G+0gT/QFK33RlfUHgH0XonzX7/83jeh5zWJ+lMJ0hXkf
+        Bv2A8TLg0ISUL3UROevf5Ac1k7ujRKOVnbdxfWO9ADhkupicayNHNZc/o6w0RAPsIsuayzTKbxq2Z8Bu
+        Ia1/hCG/HKMpp2flIMCaCGCTrPpFftiUY7dygmBPAvA3XXVuNZ7YlDNrawIAmy40nxut58J6CMAWktyW
+        cK6thwDmaTj2AwDzCAdwIBzAgXAAB8IBHAgHcCAcwIFwAAfCARwIB3AgHMCBcAAHwgEcCAdwIBzAgXAA
+        B8IBHAgHcCAcwIFwAAfCARwIB3Boyv+Ish4AmFfC4aY14D/pVk3OrAcA5shF0y3kRRjkpz0BwKY+ybty
+        E9vReNehMQHAlss25qfjHTkhyiuu+gB2m24slA9jNGWMl0tF+WRNBjDRndmXrSvcyy1TnLABNv1ds9Jo
+        Htdc7o5+kEf15mkOCwDVvl7f1JXGjub3KNu2sJCF7uU4MMBB02CutIOPW9uzXaMUVo7dpg/bLwb2k1x3
+        g5y0SY5rDhujaX4Bi2HAxpXSZrUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -42,6 +42,16 @@ namespace Gestion_des_stock.Generer_code_barre
 
         private void bunifuTextBox1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void bunifuTextBox1_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
             Random random = new Random();
             long k = random.Next(999999999) + random.Next(999999999);
             bunifuTextBox1.Text = k.ToString();

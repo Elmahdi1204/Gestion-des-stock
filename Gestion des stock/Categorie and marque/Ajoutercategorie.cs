@@ -22,6 +22,7 @@ namespace Gestion_des_stock.Categorie_and_marque
 
                 Data.Ajoutercategory(bunifuTextBox1.Text);
                 MessageBox.Show("Ajouter Avec success", "Ajouter une categorie");
+                bunifuTextBox1.Clear();
 
 
 
@@ -39,7 +40,7 @@ namespace Gestion_des_stock.Categorie_and_marque
 
                 Data.Ajoutemarque(bunifuTextBox2.Text);
                 MessageBox.Show("Ajouter Avec success", "Ajouter une Marque");
-
+                bunifuTextBox2.Clear();
             }
 
         }

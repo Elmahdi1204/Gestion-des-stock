@@ -7,19 +7,9 @@ namespace Gestion_des_stock
     {
         public Auth()
         {
-            DateTime date1 = new DateTime(2022, 10, 20);
-            DateTime date2 = new DateTime(2022, 11, 15);
-            if (DateTime.Now >= date1 && DateTime.Now <= date2)
-            {
+           
                 InitializeComponent();
-            }
-            else
-            {
-                MessageBox.Show("Lisence Expire , Num : 06 97 96 93 92 ");
-            }
-
-
-
+   
 
         }
 

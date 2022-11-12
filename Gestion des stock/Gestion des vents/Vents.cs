@@ -52,21 +52,7 @@ namespace Gestion_des_stock.Gestion_des_vents
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
-            String k = bunifuDropdown1.Text;
-
-
-            switch (k)
-            {
-                case "Numéro de Facture":
-
-                    Datavents.Loadvents(bunifuDataGridView1, bunifuTextBox1.Text);
-
-                    break;
-                case "nom client":
-                    Datavents.LoadventsClient(bunifuDataGridView1, bunifuTextBox1.Text);
-
-                    break;
-            }
+          
         }
 
         private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -201,6 +187,35 @@ namespace Gestion_des_stock.Gestion_des_vents
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue==13)
+            {
+                String k = bunifuDropdown1.Text;
+
+
+                switch (k)
+                {
+                    case "Numéro de Facture":
+
+                        Datavents.Loadvents(bunifuDataGridView1, bunifuTextBox1.Text);
+
+                        break;
+                    case "nom client":
+                        Datavents.LoadventsClient(bunifuDataGridView1, bunifuTextBox1.Text);
+
+                        break;
+                }
+
+            }
+        }
+
+        private void bunifuButton24_Click(object sender, EventArgs e)
+        {
+            Toutlesproduitvendu toutlesproduitvendu = new Toutlesproduitvendu();
+            toutlesproduitvendu.Show();
         }
     }
 }

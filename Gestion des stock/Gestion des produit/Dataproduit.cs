@@ -82,12 +82,12 @@ namespace Gestion_des_stock.Gestion_des_produit
 
 
         }
-        public static void Modifierproduit(String nom, int idcategory, int idmarque, long id)
+        public static void Modifierproduit(String nom, int idcategory, int idmarque, long newid  ,long oldid)
         {
             try
             {
                 Connexion.conn.Open();
-                sql = new SqlCommand("Update dbo.produit SET nomproduit='" + nom.Replace("'", "''") + "' , idcategory= '" + idcategory + "' , idmarque='" + idmarque + "'  where idproduit='" + id + "' ;", Connexion.conn);
+                sql = new SqlCommand("Update dbo.produit SET nomproduit='" + nom.Replace("'", "''") + "' , idcategory= '" + idcategory + "' , idmarque='" + idmarque + "'  , idproduit='" + newid + "'  where idproduit='" + oldid + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
 

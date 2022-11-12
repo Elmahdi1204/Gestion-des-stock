@@ -35,7 +35,7 @@ namespace Gestion_des_stock.Statistique
                 }
 
 
-                txt.Text = $"{ k:### ####.##}       DA";
+                txt.Text = $"{ k:### ### ###.##}       DA";
             }
             Connexion.conn.Close();
 
@@ -54,7 +54,7 @@ namespace Gestion_des_stock.Statistique
                 }
 
 
-                txt.Text = $"{ k:### ####.##}       DA";
+                txt.Text = $"{ k:### ### ###.##}      DA";
             }
             Connexion.conn.Close();
 

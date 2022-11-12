@@ -307,6 +307,7 @@
       <DependentUpon>Ajouterproduitfromachat.cs</DependentUpon>
     </Compile>
     <Compile Include="gestion achat\Dataachats.cs" />
+    <Compile Include="gestion achat\Dataproduitachte.cs" />
     <Compile Include="gestion achat\Effectueruneachats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +322,12 @@
     </Compile>
     <Compile Include="gestion achat\Getrandom.cs" />
     <Compile Include="gestion achat\Getspecifiqueproduct.cs" />
+    <Compile Include="gestion achat\modifierachats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestion achat\modifierachats.Designer.cs">
+      <DependentUpon>modifierachats.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestion achat\payecredit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,13 +348,31 @@
       <DependentUpon>Selectionerunfournissuer.cs</DependentUpon>
     </Compile>
     <Compile Include="gestion achat\Supprimerfacture.cs" />
+    <Compile Include="gestion achat\Toutlesproduitachte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestion achat\Toutlesproduitachte.Designer.cs">
+      <DependentUpon>Toutlesproduitachte.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestion achat\verification.cs" />
     <Compile Include="Gestion de stock\Datastock.cs" />
+    <Compile Include="Gestion de stock\Modifierprixproduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion de stock\Modifierprixproduit.Designer.cs">
+      <DependentUpon>Modifierprixproduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion de stock\Stock.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Gestion de stock\Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion de stock\ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion de stock\ticket.Designer.cs">
+      <DependentUpon>ticket.cs</DependentUpon>
     </Compile>
     <Compile Include="Gestion des charges\Ajoutercharges.cs">
       <SubType>Form</SubType>
@@ -439,6 +464,7 @@
     <Compile Include="Gestion des utilisateur\Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion des vents\dataproduitvendu.cs" />
     <Compile Include="Gestion des vents\Datavents.cs" />
     <Compile Include="Gestion des vents\Effectuerunevents.cs">
       <SubType>Form</SubType>
@@ -472,6 +498,12 @@
       <DependentUpon>Selectionerunclient.cs</DependentUpon>
     </Compile>
     <Compile Include="Gestion des vents\supprimerunefacture.cs" />
+    <Compile Include="Gestion des vents\Toutlesproduitvendu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des vents\Toutlesproduitvendu.Designer.cs">
+      <DependentUpon>Toutlesproduitvendu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion des vents\Vents.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -559,6 +591,9 @@
     <EmbeddedResource Include="gestion achat\Facture.resx">
       <DependentUpon>Facture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gestion achat\modifierachats.resx">
+      <DependentUpon>modifierachats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gestion achat\payecredit.resx">
       <DependentUpon>payecredit.cs</DependentUpon>
     </EmbeddedResource>
@@ -568,8 +603,17 @@
     <EmbeddedResource Include="gestion achat\Selectionerunfournissuer.resx">
       <DependentUpon>Selectionerunfournissuer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gestion achat\Toutlesproduitachte.resx">
+      <DependentUpon>Toutlesproduitachte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion de stock\Modifierprixproduit.resx">
+      <DependentUpon>Modifierprixproduit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion de stock\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion de stock\ticket.resx">
+      <DependentUpon>ticket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion des charges\Ajoutercharges.resx">
       <DependentUpon>Ajoutercharges.cs</DependentUpon>
@@ -628,6 +672,9 @@
     <EmbeddedResource Include="Gestion des vents\Selectionerunclient.resx">
       <DependentUpon>Selectionerunclient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des vents\Toutlesproduitvendu.resx">
+      <DependentUpon>Toutlesproduitvendu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion des vents\Vents.resx">
       <DependentUpon>Vents.cs</DependentUpon>
     </EmbeddedResource>
@@ -643,6 +690,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Statistique\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -794,6 +842,9 @@
     <None Include="Resources\safe-box.png" />
     <Content Include="513-removebg-preview.ico" />
     <None Include="Resources\printer %281%29.png" />
+    <None Include="Resources\bunifuPanel1.BackgroundImage.png" />
+    <None Include="Resources\buy.png" />
+    <None Include="Resources\sell.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -146,9 +146,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-#pragma warning disable CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-#pragma warning restore CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(18, 18);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -351,7 +349,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuButton22.IdleIconLeftImage = global::Gestion_des_stock.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.IdleIconRightImage = null;
             this.bunifuButton22.IndicateFocus = false;
-            this.bunifuButton22.Location = new System.Drawing.Point(724, 49);
+            this.bunifuButton22.Location = new System.Drawing.Point(544, 58);
             this.bunifuButton22.Name = "bunifuButton22";
             this.bunifuButton22.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton22.OnDisabledState.BorderRadius = 20;
@@ -385,7 +383,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuButton22.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.OnPressedState.IconLeftImage = null;
             this.bunifuButton22.OnPressedState.IconRightImage = null;
-            this.bunifuButton22.Size = new System.Drawing.Size(46, 39);
+            this.bunifuButton22.Size = new System.Drawing.Size(47, 44);
             this.bunifuButton22.TabIndex = 4;
             this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -441,7 +439,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(568, 49);
+            this.bunifuButton21.Location = new System.Drawing.Point(394, 58);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 20;
@@ -475,7 +473,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuButton21.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
-            this.bunifuButton21.Size = new System.Drawing.Size(150, 39);
+            this.bunifuButton21.Size = new System.Drawing.Size(144, 44);
             this.bunifuButton21.TabIndex = 3;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -512,7 +510,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(302, 49);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(128, 58);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -566,7 +564,7 @@ namespace Gestion_des_stock.Gestion_des_client
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 40);
+            this.label1.Location = new System.Drawing.Point(117, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 62);
             this.label1.TabIndex = 1;
@@ -576,9 +574,9 @@ namespace Gestion_des_stock.Gestion_des_client
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Gestion_des_stock.Properties.Resources.clients;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

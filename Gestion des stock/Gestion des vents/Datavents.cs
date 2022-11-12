@@ -77,7 +77,7 @@ namespace Gestion_des_stock.Gestion_des_vents
                     i++;
 
                     double credit = double.Parse(dr[2].ToString()) - double.Parse(dr[3].ToString());
-                    bunifuDataGridView.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), credit, dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToString("dd-MM-yyyy"), dr[6], dr[8], dr[7]);
+                    bunifuDataGridView.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), credit, dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToString("dd-MM |  HH:mm"), dr[6], dr[8], dr[7]);
 
 
                 }
@@ -107,7 +107,7 @@ namespace Gestion_des_stock.Gestion_des_vents
                     i++;
 
                     double credit = double.Parse(dr[2].ToString()) - double.Parse(dr[3].ToString());
-                    bunifuDataGridView.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), credit, dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToString("dd-MM-yyyy"), dr[6], dr[8], dr[7]);
+                    bunifuDataGridView.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), credit, dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToString("dd-MM | HH:mm"), dr[6], dr[8], dr[7]);
 
 
                 }

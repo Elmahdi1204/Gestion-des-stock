@@ -28,6 +28,7 @@ namespace Gestion_des_stock.Statistique
             label26.Text = benifice.Text;
             State5.totaledescharges(label23, bunifuDatePicker1.Value, bunifuDatePicker2.Value);
             label20.Text = (double.Parse(label26.Text) - double.Parse(label23.Text)).ToString();
+                
 
 
             if (double.Parse(label20.Text) < 0)

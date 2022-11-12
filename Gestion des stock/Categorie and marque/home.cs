@@ -31,5 +31,10 @@ namespace Gestion_des_stock.Categorie_and_marque
             listdesmarque1.Show();
             listdesmarque1.BringToFront();
         }
+
+        private void home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

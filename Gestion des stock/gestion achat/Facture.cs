@@ -56,7 +56,7 @@ namespace Gestion_des_stock.gestion_achat
 
                 list.Add(new report
                 {
-                    idproduit = "" + i,
+                    idproduit = "" + row.Cells[0].Value.ToString(),
                     nomproduit = row.Cells[1].Value.ToString(),
                     prix = row.Cells[2].Value.ToString(),
                     qnt = row.Cells[3].Value.ToString(),
@@ -81,6 +81,10 @@ namespace Gestion_des_stock.gestion_achat
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+
+           
             String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
 
 
@@ -111,6 +115,11 @@ namespace Gestion_des_stock.gestion_achat
                 }
 
             }
+            }
+            catch
+            {
+
+            }
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)
@@ -125,6 +134,14 @@ namespace Gestion_des_stock.gestion_achat
             Supprimerfacture.supprimerfacture(id);
             MessageBox.Show("Facture supprimer avec success", "Supprimer avec success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private void bunifuLabel1_DoubleClick(object sender, EventArgs e)
+        {
+            modifierachats modifierachats = new modifierachats(id);
+            modifierachats.ShowDialog();
+            this.Close();
+
         }
     }
     public class report

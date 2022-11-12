@@ -12,7 +12,7 @@ namespace Gestion_des_stock.gestion_des_fournissuer
 
         private void bunifuButton25_Click(object sender, EventArgs e)
         {
-            if (bunifuTextBox1.Text == "" || bunifuTextBox2.Text == "" || bunifuTextBox3.Text == "" || bunifuTextBox5.Text == "")
+            if (bunifuTextBox1.Text == "" || bunifuTextBox2.Text == "" || bunifuTextBox5.Text == "")
             {
                 MessageBox.Show("Esseye de ermplir tout les champs  ", "Erreur");
 

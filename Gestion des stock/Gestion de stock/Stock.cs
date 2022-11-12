@@ -21,28 +21,7 @@ namespace Gestion_des_stock.Gestion_de_stock
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
-            String k = bunifuDropdown1.Text;
-
-
-            switch (k)
-            {
-                case "Numéro de séries":
-
-                    Datastock.LoadStocks(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'" ,"''"));
-
-                    break;
-                case "Désignation":
-                    Datastock.LoadStocksNOM(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
-
-                    break;
-                case "Catégorie":
-                    Datastock.LoadStocksCategorie(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
-                    break;
-                case "Marque":
-                    Datastock.LoadStocksmarque(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
-                    break;
-            }
-
+          
 
 
 
@@ -106,6 +85,101 @@ namespace Gestion_des_stock.Gestion_de_stock
 
         private void bunifuDropdown1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String prix = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                ticket ticket = new ticket(nom , prix);
+                ticket.ShowDialog();
+
+
+
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
+
+        private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                String k = bunifuDropdown1.Text;
+
+
+                switch (k)
+                {
+                    case "Numéro de séries":
+
+                        Datastock.LoadStocks(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
+
+                        break;
+                    case "Désignation":
+                        Datastock.LoadStocksNOM(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
+
+                        break;
+                    case "Catégorie":
+                        Datastock.LoadStocksCategorie(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
+                        break;
+                    case "Marque":
+                        Datastock.LoadStocksmarque(bunifuDataGridView1, bunifuTextBox1.Text.Replace("'", "''"));
+                        break;
+                }
+
+            }
+        }
+
+        private void bunifuButton28_Click(object sender, EventArgs e)
+        {
+            Generer_code_barre.Genrecodebare genrecodebare = new Generer_code_barre.Genrecodebare();
+            genrecodebare.ShowDialog();
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+
+                String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
+                if (e.RowIndex < 0)
+                {
+
+                }
+                else
+
+                {
+                    if (colname == "mod")
+                    {
+                        int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+
+                        long id = long.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        
+                        String nomproduit = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                        String prix = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                        Modifierprixproduit p = new Modifierprixproduit(id  , nomproduit , prix ) ;
+                        p.ShowDialog();
+                        bunifuButton22.PerformClick();
+                        bunifuDataGridView1.Rows[index].Selected = true;
+
+                    }
+
+
+                }
+            }
+            catch
+            {
+
+            }
+
 
         }
     }

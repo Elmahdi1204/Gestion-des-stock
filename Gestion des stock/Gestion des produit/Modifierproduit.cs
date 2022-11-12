@@ -12,6 +12,7 @@ namespace Gestion_des_stock.Gestion_des_produit
         {
             InitializeComponent();
             bunifuTextBox1.Text = nom;
+           this.id = id;
             bunifuTextBox2.Text = id.ToString();
             bunifuDropdown1.Text = "Selectioner la catagerie ";
             bunifuDropdown2.Text = "Selectioner la marque";
@@ -38,7 +39,7 @@ namespace Gestion_des_stock.Gestion_des_produit
 
 
 
-                Dataproduit.Modifierproduit(bunifuTextBox1.Text, int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuDropdown2.SelectedValue.ToString()), long.Parse(bunifuTextBox2.Text));
+                Dataproduit.Modifierproduit(bunifuTextBox1.Text, int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuDropdown2.SelectedValue.ToString()), long.Parse(bunifuTextBox2.Text) , id);
                 MessageBox.Show("Produit modifier ave success", "Success");
                 bunifuDropdown1.Text = "Selectioner la catagerie ";
                 bunifuDropdown2.Text = "Selectioner la marque";

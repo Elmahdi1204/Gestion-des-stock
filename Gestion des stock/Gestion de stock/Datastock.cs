@@ -139,5 +139,13 @@ namespace Gestion_des_stock.Gestion_de_stock
 
 
         }
+        public static void Modifierprixproduit( double prix , long id)
+        {
+            Connexion.conn.Open();
+            sql = new SqlCommand("Update dbo.stock SET prixvent='" + prix + "'   where idproduit='" + id + "' ;", Connexion.conn);
+            sql.ExecuteNonQuery();
+            Connexion.conn.Close();
+
+        }
     }
 }

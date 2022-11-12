@@ -89,7 +89,7 @@ namespace Gestion_des_stock.Gestion_des_vents
                     idproduit = "" + row.Cells[0].Value.ToString(),
                     nomproduit = row.Cells[1].Value.ToString(),
                     prix = row.Cells[2].Value.ToString()+" DA",
-                    qnt = row.Cells[3].Value.ToString()+" X",
+                    qnt = row.Cells[3].Value.ToString(),
                     prixqnt = row.Cells[4].Value.ToString(),
 
 

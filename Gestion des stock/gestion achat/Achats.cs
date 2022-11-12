@@ -48,21 +48,6 @@ namespace Gestion_des_stock.gestion_achat
         {
 
 
-            String k = bunifuDropdown1.Text;
-
-
-            switch (k)
-            {
-                case "Numéro de Facture":
-
-                    Dataachats.Loadfacture(bunifuDataGridView1, bunifuTextBox1.Text);
-
-                    break;
-                case "Nom de Fournisseur":
-                    Dataachats.LoadfactureFournisseur(bunifuDataGridView1, bunifuTextBox1.Text);
-
-                    break;
-            }
 
         }
 
@@ -161,6 +146,35 @@ namespace Gestion_des_stock.gestion_achat
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+
+                String k = bunifuDropdown1.Text;
+
+
+                switch (k)
+                {
+                    case "Numéro de Facture":
+
+                        Dataachats.Loadfacture(bunifuDataGridView1, bunifuTextBox1.Text);
+
+                        break;
+                    case "Nom de Fournisseur":
+                        Dataachats.LoadfactureFournisseur(bunifuDataGridView1, bunifuTextBox1.Text);
+
+                        break;
+                }
+            }
+            }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            Toutlesproduitachte toutlesproduitachte = new Toutlesproduitachte();
+            toutlesproduitachte.Show();
         }
     }
 }

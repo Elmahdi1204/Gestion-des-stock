@@ -20,7 +20,7 @@ namespace Gestion_des_stock.Gestion_des_vents
             {
                 label6.Hide();
                 label5.Hide();
-                bunifuTextBox1.Enabled = false;
+               
                 bunifuDataGridView3.Columns[3].Visible = false;
                 bunifuDataGridView1.Columns[5].Visible = false;
                 bunifuTextBox9.PasswordChar = '*';
@@ -43,8 +43,7 @@ namespace Gestion_des_stock.Gestion_des_vents
 
         private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
         {
-            Gestion_de_stock.Datastock.LoadStocksNOM(bunifuDataGridView3, bunifuTextBox4.Text.Replace("'", "''"));
-
+           
         }
 
         private void bunifuButton23_Click(object sender, EventArgs e)
@@ -88,6 +87,7 @@ namespace Gestion_des_stock.Gestion_des_vents
                         gestion_achat.Getspecifiqueproduct.Getfromstock(long.Parse(bunifuTextBox6.Text), bunifuTextBox5, bunifuTextBox9, bunifuTextBox1);
                         qntdisponible = Routour.Getqnt(long.Parse(bunifuTextBox6.Text));
                         bunifuTextBox2.Focus();
+                        bunifuTextBox2.Text = "1";
                         bunifuTextBox2.SelectionLength = bunifuTextBox2.TextLength;
                     }
                     else
@@ -192,39 +192,37 @@ namespace Gestion_des_stock.Gestion_des_vents
                 else
                 {
 
-                    if (int.Parse(bunifuTextBox1.Text) > int.Parse(bunifuTextBox9.Text))
+                    if (int.Parse(bunifuTextBox1.Text) < int.Parse(bunifuTextBox9.Text))
                     {
-                        if (bunifuTextBox2.Text == "0" || int.Parse(bunifuTextBox2.Text) > qntdisponible)
-                        {
-                            MessageBox.Show("Quantite undiponible", "Alert de quantite ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            bunifuTextBox2.Text = qntdisponible.ToString();
-                            bunifuTextBox6.Clear();
-                            bunifuTextBox6.Focus();
-                        }
-                        else
-                        {
-                            double prixqnt = double.Parse(bunifuTextBox2.Text) * double.Parse(bunifuTextBox1.Text);
-                            bunifuDataGridView1.Rows.Add(bunifuTextBox6.Text, bunifuTextBox5.Text, bunifuTextBox1.Text, bunifuTextBox2.Text, prixqnt.ToString(), bunifuTextBox3.Text);
-                            label2.Text = $"{ totale():### ####.##}  DA";
-                            label5.Text = $"{ totalebenifice():### ####.##}  DA";
-                            bunifuTextBox8.Text = totale().ToString();
-                            bunifuTextBox1.Text = "0";
+                        MessageBox.Show("le prix d'achat est superiere au prix de vent ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                            bunifuTextBox2.Text = "1";
-                            bunifuTextBox9.Text = "0";
-
-
-                            bunifuTextBox3.Clear();
-                            bunifuTextBox4.Clear();
-                            bunifuTextBox5.Clear();
-                            bunifuTextBox6.Clear();
-                            bunifuTextBox6.Focus();
-                        }
-
+                    }
+                   
+                    if (bunifuTextBox2.Text == "0" || int.Parse(bunifuTextBox2.Text) > qntdisponible)
+                    {
+                        MessageBox.Show("Quantite undiponible", "Alert de quantite ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        bunifuTextBox2.Text = qntdisponible.ToString();
+                        bunifuTextBox6.Clear();
+                        bunifuTextBox6.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("le prix d'achat est superiere au prix de vent ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        double prixqnt = double.Parse(bunifuTextBox2.Text) * double.Parse(bunifuTextBox1.Text);
+                        bunifuDataGridView1.Rows.Add(bunifuTextBox6.Text, bunifuTextBox5.Text, bunifuTextBox1.Text, bunifuTextBox2.Text, prixqnt.ToString(), bunifuTextBox3.Text);
+                        label2.Text = $"{ totale():### ####.##}  DA";
+                        label5.Text = $"{ totalebenifice():### ####.##}  DA";
+                        bunifuTextBox8.Text = totale().ToString();
+                        bunifuTextBox1.Text = "0";
+
+                        bunifuTextBox2.Text = "1";
+                        bunifuTextBox9.Text = "0";
+
+
+                        bunifuTextBox3.Clear();
+                        bunifuTextBox4.Clear();
+                        bunifuTextBox5.Clear();
+                        bunifuTextBox6.Clear();
+                        bunifuTextBox6.Focus();
                     }
 
 
@@ -356,14 +354,14 @@ namespace Gestion_des_stock.Gestion_des_vents
                         MessageBox.Show("Vents effectué avec succes", "Vent avec success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<gestion_achat.report> list = new List<gestion_achat.report>();
                         list.Clear();
-                        int k = 0;
+                      
                         foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
                         {
 
 
                             list.Add(new gestion_achat.report
                             {
-                                idproduit = "" + k,
+                                idproduit = "" + row.Cells[0].Value.ToString(),
                                 nomproduit = row.Cells[1].Value.ToString(),
                                 prix = row.Cells[2].Value.ToString(),
                                 qnt = row.Cells[3].Value.ToString(),
@@ -374,13 +372,13 @@ namespace Gestion_des_stock.Gestion_des_vents
                             });
 
 
-                            k++;
+                         
 
 
                         }
                         if (bunifuCheckBox1.Checked==true)
                         {
-                            facture.Facture imp = new facture.Facture(list, idfacture.ToString(), nomcleint, DateTime.Now.ToString("dd/MM/yyyy"), label2.Text, bunifuTextBox8.Text);
+                            facture.Facture imp = new facture.Facture(list, idfacture.ToString(), nomcleint, DateTime.Now.ToString("dd/MM/yyyy"), totale().ToString(), bunifuTextBox8.Text);
                             imp.ShowDialog();
                         }
                        
@@ -506,6 +504,14 @@ namespace Gestion_des_stock.Gestion_des_vents
         {
             Selectionerunclient selectionerunclient = new Selectionerunclient();
             selectionerunclient.ShowDialog();
+        }
+
+        private void bunifuTextBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue==13) {
+                Gestion_de_stock.Datastock.LoadStocksNOM(bunifuDataGridView3, bunifuTextBox4.Text.Replace("'", "''"));
+
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Gestion_des_stock.gestion_achat.Ajouter_produit
             }
             else
             {
-
+               
 
 
                 Gestion_des_produit.Dataproduit.Ajouterproduit(bunifuTextBox1.Text, int.Parse(bunifuDropdown2.SelectedValue.ToString()), int.Parse(bunifuDropdown1.SelectedValue.ToString()), long.Parse(bunifuTextBox2.Text));
